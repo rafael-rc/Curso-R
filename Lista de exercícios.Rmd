@@ -1,0 +1,45 @@
+---
+title: "Lista de Exercícios"
+output: html_document
+---
+
+## 1 Converter Celsius para Fahrenheit
+```{r CparaF}
+CparaF <- function(Cels) {Far <- ((Cels * 9 / 5) + 32)
+return(Far)}
+```
+
+## 2 Converter Celsius para Fahrenheit com uma casa decimal
+```{r CparaFdecimal}
+CFdecimal <- function(Cels) {Far <- round((Cels * 9 / 5) + 32 , digits =  1)
+return(Far)}
+```
+
+## 3 Converter Fahrenheit para Celsius
+```{r}
+FparaC <- function(Fahr) {Cels <- ((Fahr - 32) * (5/9))
+return (Cels)}
+FparaC(32)
+```
+
+## 4 Função com as duas conversões
+```{r bothconvert}
+bothconver <- function (CE, FA) {
+  {a <- round((CE * (9 / 5) + 32), digits = 1)}
+  {b <- round(((5 / 9) * (FA - 32)), digits = 1)}
+  return(list(c(a , b)))}
+
+bothconver(35 ,35)
+```
+
+## 5 Vetor de convers�o
+```{r celsius para fahrenheit}
+temperatura <- c(1:20)
+CparaF (temperatura)
+```
+```{r fahrenheit para celsius}
+temperatura2 <- c(1:20)
+FparaC(temperatura2)
+```
+
+temeprat
