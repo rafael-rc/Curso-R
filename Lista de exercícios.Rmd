@@ -3,26 +3,26 @@ title: "Lista de Exercícios"
 output: html_document
 ---
 
-## 1 Converter Celsius para Fahrenheit
+## 1.a Converter Celsius para Fahrenheit
 ```{r CparaF}
 CparaF <- function(Cels) {Far <- ((Cels * 9 / 5) + 32)
 return(Far)}
 ```
 
-## 2 Converter Celsius para Fahrenheit com uma casa decimal
+## 1.b Converter Celsius para Fahrenheit com uma casa decimal
 ```{r CparaFdecimal}
 CFdecimal <- function(Cels) {Far <- round((Cels * 9 / 5) + 32 , digits =  1)
 return(Far)}
 ```
 
-## 3 Converter Fahrenheit para Celsius
+## 2 Converter Fahrenheit para Celsius
 ```{r}
 FparaC <- function(Fahr) {Cels <- ((Fahr - 32) * (5/9))
 return (Cels)}
 FparaC(32)
 ```
 
-## 4 Função com as duas conversões
+## 3 Função com as duas conversões
 ```{r bothconvert}
 bothconver <- function (CE, FA) {
   {a <- round((CE * (9 / 5) + 32), digits = 1)}
@@ -32,7 +32,7 @@ bothconver <- function (CE, FA) {
 bothconver(35 ,35)
 ```
 
-## 5 Vetor de convers�o
+## 4 Vetor de conversão
 ```{r celsius para fahrenheit}
 temperatura <- c(1:20)
 CparaF (temperatura)
@@ -42,4 +42,16 @@ temperatura2 <- c(1:20)
 FparaC(temperatura2)
 ```
 
-temeprat
+## 5 Duas conversões de vetores
+```{r}
+convertmatrix <- function (CE, FA) {
+  {a <- round((CE * (9 / 5) + 32), digits = 1)}
+  {b <- round(((5 / 9) * (FA - 32)), digits = 1)}
+  return(matrix(c(a , b), ncol = 2))}
+a <- c(0, 32, 64)
+b <- c(0, 32, 64)
+convertmatrix(a, b)
+```
+## 6 Construção do data.frame com dados de Goiânia
+´´´{r data frame}
+
